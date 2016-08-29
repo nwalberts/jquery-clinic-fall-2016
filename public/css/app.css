@@ -1,0 +1,27 @@
+.green-text {
+  color: green;
+}
+
+.thumbnail {
+  width: 25%;
+  height: 25%;
+}
+
+h1  {
+  font-weight: bolder;
+}
+
+h3  {
+  color: black;
+}
+
+.menu > li {
+  font-size: 175%;
+  font-weight: bolder;
+}
+
+
+/*MAGIC*/
+.feature {
+  visibility: hidden;
+}
