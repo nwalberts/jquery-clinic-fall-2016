@@ -148,7 +148,7 @@ $("#comic-book").click(function() {
 ```
 ### Append something new to list from form field, reset field
 ```
-("#thing-button").click(function() {
+$("#thing-button").click(function() {
   var newThing = $("#thing-name").val();
   $("ul").append("<li>" + newThing + "</li>");
   $("#thing-name").val("");
@@ -157,3 +157,46 @@ $("#comic-book").click(function() {
 
 Notice how the above syntax for grabbing the value is different syntactically then vanilla JS.  The last line resets the name field to be an empty string.  If you refresh the page, whatever you added will be lost because we did not add it to the database so the data was not able to persist...BUT... stay tuned for AJAX :)
 Side note: you'll notice the item was added near the top bar as well, this is because there's a ul in my topbar so $("ul") is selecting both unordered lists in the DOM, just an fyi.
+Also keep in mind, we could have executed ALOT more code in here! More often than not, you'll use jQuery to listen to specific events, then combine it with vanilla JS to do
+some manipulation of the objects that jQuery might return, and then when done change how
+the DOM looks on the page to reflect a change. Often times you'll even use AJAX.
+
+Common Event Listeners
+```
+click()
+bind()
+preventDefault()
+scroll()
+etc.
+```
+
+Nearly any event you can think of! Note, most are variants of the `.on` method!
+
+### Packages
+
+So you've fiddled around with jQuery. You realize that it was rather convenient
+that we could just download jQuery right into our app with a simple file and script.
+
+What's more, you are wondering: Nick dawgy dawg, I noticed that jQuery is probably just one of MANY libraries out there that can beef up our application. What, if anything is out there, and how do I add it to my application, yo?
+
+- rails gems abound that include these libraries, and you can simply add some to your Gemfile and bundle to add their functionality!
+- some few are hosted on the CDN like jQuery
+- some you can simple download a few JS files into your app but...
+
+### npm package manager
+- bundler/rubygems (client, website, registry)
+- especially if this libraries have dependencies, or need to be regularly updated, you'll
+want something to manage the versions of these libraries for you, and have them quickly be
+installed in your app
+- npm allows us to quickly add these libraries/packages, because it hosts them on the npm website,
+much like Ruby hosts their gems on THEIR website
+
+A few libraries...
+- lodash: takes the hassle out of working with arrays, unless you looovvvee the current way
+- underscore: EVEN MORE awesome functions that you can call on arrays and objects
+- react: thats right....its a library. It has oodles of things you can call on, but it is up to you
+
+library vs framework
+- library adds features and chunks of code that you can call on when needed
+- a framework requires that you add code in specific places according to accepted conventions, and then calls on THAT code.
+MM
